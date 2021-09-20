@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-todo-app-mGvp_cQwu)
+- Live Site URL: [Add live site URL here](https://lord-psarris.github.io/Todo-app-solution/)
 
 ## My process
 
@@ -34,7 +34,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
 - [JQuery](https://jquery.com/)
 
 ### Continued development

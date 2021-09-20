@@ -36,7 +36,7 @@
             <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
           </label>
         </div>
-        <input type="text" placeholder="Create a new todo" name="" id="">
+        <input type="text" placeholder="Create a new todo">
       </div>
     </div>
 
@@ -160,7 +160,7 @@
     <div id="">
       <div class="box">
         <div class="check">
-          <input type="checkbox" name="" id="" class="checkbox">
+          <input type="checkbox" class="checkbox">
           <label for="" class="check-label">
             <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
           </label>
@@ -234,12 +234,16 @@
     $(document).on('click', '.close', function () { // for dynamic elements
       var id_ = $(this).data('id')
       $(`#${id_}`).remove()
+      count = $('.checkbox:checkbox:not(:checked)').length
+      countTag.html(count)
     })
 
     // clearing all completed notes
     $(document).on('click', '.clear', function() {
       $('.checkbox:checkbox').prop('checked', false)
       $(".box > p").removeClass('checked')
+      count = $('.checkbox:checkbox:not(:checked)').length
+      countTag.html(count)
     })
 
     // sorting by only completed notes
