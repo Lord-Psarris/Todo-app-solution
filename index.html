@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href =  "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+  <main>
+    <div class="header">
+      <h1>Todo</h1>
+      <div class="toggle-icons">
+        <a href="#" onclick="lightMode()" class="toggle-day">
+          <img src="./images/icon-sun.svg" alt="light">
+        </a>
+        <a href="#" onclick="darkMode()" class="toggle-night active">
+          <img src="./images/icon-moon.svg" alt="light">
+        </a>
+      </div>
+    </div>
+
+    <div class="add-todo">
+      <div class="box">
+        <div class="check">
+          <input type="checkbox" name="" id="main-checkbox">
+          <label for="main-checkbox" class="check-label">
+            <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+          </label>
+        </div>
+        <input type="text" placeholder="Create a new todo" name="" id="">
+      </div>
+    </div>
+
+    <div class="todos">
+      <div id="todo-items">
+
+        <div id="1">
+          <div class="box">
+            <div class="check">
+              <input checked type="checkbox" name="" id="checkbox-1" class="checkbox">
+              <label for="checkbox-1" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+  
+            <p class="checkbox-1 checked">Complete online JavaScript course</p>
+            <div data-id="1" class="close">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+
+        <div id="2">
+          <div class="box">
+            <div class="check">
+              <input type="checkbox" name="" id="checkbox-2" class="checkbox">
+              <label for="checkbox-2" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+            <p class="checkbox-2">Jog around the park 3x</p>
+            <div class="close" data-id="2">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+
+        <div id="3">
+          <div class="box">
+            <div class="check">
+              <input type="checkbox" name="" id="checkbox-3" class="checkbox">
+              <label for="checkbox-3" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+            <p class="checkbox-3">10 minutes meditation</p>
+            <div class="close" data-id="3">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+
+        <div id="4">
+          <div class="box">
+            <div class="check">
+              <input type="checkbox" name="" id="checkbox-4" class="checkbox">
+              <label for="checkbox-4" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+            <p class="checkbox-4">Read for 1 hour</p>
+            <div class="close" data-id="4">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+
+        <div id="5">
+          <div class="box">
+            <div class="check">
+              <input type="checkbox" name="" id="checkbox-5" class="checkbox">
+              <label for="checkbox-5" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+            <p class="checkbox-5">Pick up groceries</p>
+            <div class="close" data-id="5">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+
+        <div id="6">
+          <div class="box">
+            <div class="check">
+              <input type="checkbox" name="" id="checkbox-6" class="checkbox">
+              <label for="checkbox-6" class="check-label">
+                <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+              </label>
+            </div>
+            <p class="checkbox-6">Complete Todo App on Frontend Mentor</p>
+            <div class="close" data-id="6">
+              <img src="./images/icon-cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="hr"></span>
+        </div>
+      </div>
+      <div class="others">
+        <span>
+          <i id="count"></i>
+          &nbsp;items left
+        </span>
+        <p class="switch-tab">
+          <a href="#" class="active" onclick="allItems(event)">All</a>
+          <a href="#" class="" onclick="activeItems(event)">Active</a>
+          <a href="#" class="" onclick="completedItems(event)">Completed</a>
+        </p>
+        <a href="#" class="clear">Clear Completeed</a>
+      </div>
+    </div>
+  </main>
+
+
+  <template>
+    <div id="">
+      <div class="box">
+        <div class="check">
+          <input type="checkbox" name="" id="" class="checkbox">
+          <label for="" class="check-label">
+            <img src="./images/icon-check.svg" alt="check-mark" class="check-mark">
+          </label>
+        </div>
+        <p></p>
+        <div class="close" data-id="">
+          <img src="./images/icon-cross.svg" alt="cross">
+        </div>
+      </div>
+      <span class="hr"></span>
+    </div>
+  </template>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+    $(function() {
+        $( "#todo-items" ).sortable({
+          cursor: 'grabbing'
+        });
+    });
+
+    var count = $('.checkbox:checkbox:not(:checked)').length
+    var countTag = $("#count")
+    
+    countTag.html(count)
+
+    // when checkbox is clicked
+    $(document).on('change', '.checkbox', function () { // for dynamic elements
+      $(`.${$(this).attr('id')}`).toggleClass('checked')
+      count = $('.checkbox:checkbox:not(:checked)').length
+      countTag.html(count)
+    })
+
+    // when adding new notes
+    $("input").on("keydown",function (e) {
+      if(e.key == 'Enter') {
+          if ($(this).val() != '') {
+            var template = $($('template').html())
+
+            var currentItems = $('#todo-items > div')
+            currentItemsList = []
+            currentItems.each( function() {
+              currentItemsList.push($(this).attr("id"))
+            })
+            currentCount = Math.max(...currentItemsList) + 1
+
+            template.attr('id', currentCount) // set id
+
+            var templateInput = template.find(".checkbox")
+            var templateLabel = template.find("label")
+            var templatePTag = template.find("p")
+            var templateClose = template.find(".close")
+
+            templateInput.attr('id', `checkbox-${currentCount}`)
+            templateLabel.attr('for', `checkbox-${currentCount}`)
+            templatePTag.addClass(`checkbox-${currentCount}`)
+            templatePTag.html($(this).val())
+            templateClose.data('id', currentCount)
+
+            $('#todo-items').append(template)
+            $(this).val('')
+
+            count++
+            countTag.html(count) 
+          }
+        }
+    });
+
+    // deleting notes
+    $(document).on('click', '.close', function () { // for dynamic elements
+      var id_ = $(this).data('id')
+      $(`#${id_}`).remove()
+    })
+
+    // clearing all completed notes
+    $(document).on('click', '.clear', function() {
+      $('.checkbox:checkbox').prop('checked', false)
+      $(".box > p").removeClass('checked')
+    })
+
+    // sorting by only completed notes
+    function completedItems(e) {
+      $(".switch-tab > a.active").removeClass('active')
+      $(e.currentTarget).addClass('active')
+      $('#todo-items > div > .box').each( function () {
+        let checkLength = $(this).find('.checkbox:checkbox:checked').length
+        if (checkLength == 0) {
+          $(this).parent().css('display', 'none')
+        } else {
+          $(this).parent().css('display', '')
+        }
+      })
+    }
+
+    // sorting by all notes
+    function allItems(e) {
+      $(".switch-tab > a.active").removeClass('active')
+      $(e.currentTarget).addClass('active')
+      $('#todo-items > div').each( function () {
+        $(this).css('display', '')
+      })
+    }
+
+    // sorting by all active notes
+    function activeItems(e) {
+      $(".switch-tab > a.active").removeClass('active')
+      $(e.currentTarget).addClass('active')
+      $('#todo-items > div > .box').each( function () {
+        let checkLength = $(this).find('.checkbox:checkbox:checked').length
+        if (checkLength != 0) {
+          $(this).parent().css('display', 'none')
+        } else {
+          $(this).parent().css('display', '')
+        }
+      })
+    }
+
+    // toggling darkmode
+    function darkMode() {
+      var body = document.body
+      var lightButton = document.querySelector('.toggle-day')
+      var darkButton = document.querySelector('.toggle-night')
+      lightButton.classList.add('active')
+      darkButton.classList.remove('active')
+      body.classList.add('dark')
+    }
+
+    // toggling light mode
+    function lightMode() {
+      var body = document.body
+      var lightButton = document.querySelector('.toggle-day')
+      var darkButton = document.querySelector('.toggle-night')
+      lightButton.classList.remove('active')
+      darkButton.classList.add('active')
+      body.classList.remove('dark')
+    }
+  </script>
+
+</body>
+</html>
